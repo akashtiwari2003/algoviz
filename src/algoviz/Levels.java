@@ -33,8 +33,8 @@ public class Levels extends javax.swing.JFrame {
         card3 = new javax.swing.JLabel();
         card2 = new javax.swing.JLabel();
         card1 = new javax.swing.JLabel();
-        topBar = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(900, 800));
@@ -125,10 +125,12 @@ public class Levels extends javax.swing.JFrame {
         });
         jPanel1.add(card1);
         card1.setBounds(60, 190, 230, 200);
-        jPanel1.add(topBar);
-        topBar.setBounds(0, 0, 900, 170);
         jPanel1.add(background);
         background.setBounds(0, 0, 900, 800);
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(0, 0, 900, 800);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -153,8 +155,7 @@ int width = 230;
         a.setBackground("gradient3.jpg", card4);
         a.setBackground("gradient1.jpg", card5);
         a.setBackground("gradient2.jpg", card6);
-        a.setBackground("cover.png", topBar);
-        a.setBackground("black.png", background);
+        a.setBackground("blurLabel.png", background);
         System.out.println(card2.getSize());
     }//GEN-LAST:event_formWindowOpened
 
@@ -249,7 +250,7 @@ card1.setSize(width,height);
     private javax.swing.JLabel card4;
     private javax.swing.JLabel card5;
     private javax.swing.JLabel card6;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel topBar;
     // End of variables declaration//GEN-END:variables
 }
