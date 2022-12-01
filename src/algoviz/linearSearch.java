@@ -35,6 +35,7 @@ public class linearSearch extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(900, 800));
@@ -48,54 +49,63 @@ public class linearSearch extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         btn5.setBackground(new java.awt.Color(0, 0, 0));
+        btn5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btn5.setForeground(new java.awt.Color(255, 255, 255));
         btn5.setText("E");
         jPanel1.add(btn5);
         btn5.setBounds(330, 270, 225, 111);
 
         btn2.setBackground(new java.awt.Color(0, 0, 0));
+        btn2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btn2.setForeground(new java.awt.Color(255, 255, 255));
         btn2.setText("B");
         jPanel1.add(btn2);
         btn2.setBounds(330, 130, 225, 111);
 
         btn3.setBackground(new java.awt.Color(0, 0, 0));
+        btn3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btn3.setForeground(new java.awt.Color(255, 255, 255));
         btn3.setText("C");
         jPanel1.add(btn3);
         btn3.setBounds(580, 130, 225, 111);
 
         btn1.setBackground(new java.awt.Color(0, 0, 0));
+        btn1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btn1.setForeground(new java.awt.Color(255, 255, 255));
         btn1.setText("A");
         jPanel1.add(btn1);
         btn1.setBounds(80, 130, 225, 111);
 
         btn6.setBackground(new java.awt.Color(0, 0, 0));
+        btn6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btn6.setForeground(new java.awt.Color(255, 255, 255));
         btn6.setText("F");
         jPanel1.add(btn6);
         btn6.setBounds(580, 270, 225, 111);
 
         btn7.setBackground(new java.awt.Color(0, 0, 0));
+        btn7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btn7.setForeground(new java.awt.Color(255, 255, 255));
         btn7.setText("G");
         jPanel1.add(btn7);
         btn7.setBounds(80, 410, 225, 111);
 
         btn8.setBackground(new java.awt.Color(0, 0, 0));
+        btn8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btn8.setForeground(new java.awt.Color(255, 255, 255));
         btn8.setText("H");
         jPanel1.add(btn8);
         btn8.setBounds(330, 410, 225, 111);
 
         btn9.setBackground(new java.awt.Color(0, 0, 0));
+        btn9.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btn9.setForeground(new java.awt.Color(255, 255, 255));
         btn9.setText("I");
         jPanel1.add(btn9);
         btn9.setBounds(580, 410, 225, 111);
 
         btn4.setBackground(new java.awt.Color(0, 0, 0));
+        btn4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btn4.setForeground(new java.awt.Color(255, 255, 255));
         btn4.setText("D");
         jPanel1.add(btn4);
@@ -127,6 +137,8 @@ public class linearSearch extends javax.swing.JFrame {
         });
         jPanel1.add(jButton3);
         jButton3.setBounds(755, 610, 0, 10);
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(0, 0, 900, 800);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 900, 800);
@@ -266,6 +278,7 @@ private void setBlack(Color col){
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
