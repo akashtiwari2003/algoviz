@@ -2,6 +2,7 @@
 package algoviz;
 
 import java.awt.Color;
+import static java.awt.Color.black;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -31,6 +32,7 @@ public class linearSearch extends javax.swing.JFrame {
         btn8 = new javax.swing.JButton();
         btn9 = new javax.swing.JButton();
         btn4 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
@@ -99,6 +101,15 @@ public class linearSearch extends javax.swing.JFrame {
         jPanel1.add(btn4);
         btn4.setBounds(80, 270, 225, 111);
 
+        jButton2.setText("Start");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2);
+        jButton2.setBounds(550, 580, 170, 50);
+
         jButton1.setText("Start");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,6 +145,7 @@ int h;
         public void actionPerformed(ActionEvent e) {
             if(h>=9){
                 timerr.stop();
+                JOptionPane.showMessageDialog(null, "Found!");
             }
             for(int g = 0;g<9;++g){
                 arBt[g].setBackground(Color.black);
@@ -142,6 +154,11 @@ int h;
         }
     });
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+int checkBG = checkBg();
+if(checkBG == 1){
+    JOptionPane.showMessageDialog(this,"Reset First!!");
+}
+else{
 bt[0] = btn1;
 bt[1] = btn2;
 bt[2] = btn3;
@@ -156,6 +173,7 @@ for(int u = 0; u<9; ++u){
     s1[u] = bt[u].getText();
 }
         timerr.start();
+}
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
@@ -168,6 +186,7 @@ arBt[5] = btn6;
 arBt[6] = btn7;
 arBt[7] = btn8;
 arBt[8] = btn9;
+setBlack(black);
     }//GEN-LAST:event_formWindowOpened
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -175,10 +194,15 @@ if(h<9){
     if(s1[h].equals(fi)){
         timerr.stop();
     }
-    bt[h].setBackground(Color.MAGENTA);
+    bt[h].setBackground(Color.BLUE);
     ++h;
 }
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+setBlack(black);
+h=0;
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     public static void main(String args[]) {
@@ -212,7 +236,21 @@ if(h<9){
             }
         });
     }
+private int checkBg(){
+    int cnt = 0;
+    for(int i = 0; i<9; ++i){
+        if(arBt[i].getBackground() != black){
+            return 1;
+        }
+    }
+    return 0;
+}
 
+private void setBlack(Color col){
+    for(int i = 0; i<9; ++i){
+        arBt[i].setBackground(col);
+    }
+}
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn1;
     private javax.swing.JButton btn2;
@@ -224,6 +262,7 @@ if(h<9){
     private javax.swing.JButton btn8;
     private javax.swing.JButton btn9;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
