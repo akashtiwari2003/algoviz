@@ -4,6 +4,11 @@
  */
 package algoviz;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 /**
  *
  * @author Lenovo
@@ -27,6 +32,7 @@ public class Levels extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jProgressBar1 = new javax.swing.JProgressBar();
         card6 = new javax.swing.JLabel();
         card5 = new javax.swing.JLabel();
         card4 = new javax.swing.JLabel();
@@ -46,7 +52,11 @@ public class Levels extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
+        jPanel1.add(jProgressBar1);
+        jProgressBar1.setBounds(100, 50, 560, 30);
 
+        card6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        card6.setForeground(new java.awt.Color(255, 255, 255));
         card6.setText("jLabel1");
         card6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         card6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -60,6 +70,8 @@ public class Levels extends javax.swing.JFrame {
         jPanel1.add(card6);
         card6.setBounds(600, 430, 230, 200);
 
+        card5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        card5.setForeground(new java.awt.Color(255, 255, 255));
         card5.setText("jLabel1");
         card5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         card5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -73,6 +85,8 @@ public class Levels extends javax.swing.JFrame {
         jPanel1.add(card5);
         card5.setBounds(330, 430, 230, 200);
 
+        card4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        card4.setForeground(new java.awt.Color(255, 255, 255));
         card4.setText("jLabel1");
         card4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         card4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -86,6 +100,8 @@ public class Levels extends javax.swing.JFrame {
         jPanel1.add(card4);
         card4.setBounds(60, 430, 230, 200);
 
+        card3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        card3.setForeground(new java.awt.Color(255, 255, 255));
         card3.setText("Bubble Sort");
         card3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         card3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -99,6 +115,8 @@ public class Levels extends javax.swing.JFrame {
         jPanel1.add(card3);
         card3.setBounds(600, 190, 230, 200);
 
+        card2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        card2.setForeground(new java.awt.Color(255, 255, 255));
         card2.setText("Binary Search");
         card2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         card2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -115,6 +133,8 @@ public class Levels extends javax.swing.JFrame {
         jPanel1.add(card2);
         card2.setBounds(330, 190, 230, 200);
 
+        card1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        card1.setForeground(new java.awt.Color(255, 255, 255));
         card1.setText("Linear Search");
         card1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         card1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -154,6 +174,7 @@ algovizFunctions a = new algovizFunctions();
 int height = 200;
 int width = 230;
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        int status1,status2,status3,status4,prog = 0;
         a.setBackground("g1.png", card1);
         a.setBackground("gradient6.jpg", card2);
         a.setBackground("gradient5.jpg", card3);
@@ -162,6 +183,32 @@ int width = 230;
         a.setBackground("gradient2.jpg", card6);
         a.setBackground("blurLabel.png", background);
         System.out.println(card2.getSize());
+        try{
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algovizdb","root","root");
+            Statement st = con.createStatement();
+            String qry = "select * from logintemp;";
+            ResultSet rs = st.executeQuery(qry);
+            rs.next();
+            String query = "select * from progress where username = '"+rs.getString(1)+"'";
+            ResultSet rh = st.executeQuery(query);
+            rh.next();
+            status1 = rh.getInt(2);
+            status2 = rh.getInt(3);
+            status3 = rh.getInt(4);
+            status4 = rh.getInt(5);
+            if(status1 == 1)
+                prog += 25;
+            if(status2 == 1)
+                prog+= 25;
+            if(status3 == 1)
+                prog+= 25;
+            if(status4 == 1)
+                prog+= 25;
+            jProgressBar1.setValue(prog);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_formWindowOpened
 
     private void card1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card1MouseEntered
@@ -269,5 +316,6 @@ this.dispose();
     private javax.swing.JLabel card6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JProgressBar jProgressBar1;
     // End of variables declaration//GEN-END:variables
 }
