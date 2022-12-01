@@ -38,7 +38,6 @@ public class Levels extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(900, 800));
-        setPreferredSize(new java.awt.Dimension(900, 800));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -87,7 +86,7 @@ public class Levels extends javax.swing.JFrame {
         jPanel1.add(card4);
         card4.setBounds(60, 430, 230, 200);
 
-        card3.setText("jLabel1");
+        card3.setText("Bubble Sort");
         card3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         card3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -100,9 +99,12 @@ public class Levels extends javax.swing.JFrame {
         jPanel1.add(card3);
         card3.setBounds(600, 190, 230, 200);
 
-        card2.setText("jLabel1");
+        card2.setText("Binary Search");
         card2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         card2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                card2MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 card2MouseEntered(evt);
             }
@@ -113,9 +115,12 @@ public class Levels extends javax.swing.JFrame {
         jPanel1.add(card2);
         card2.setBounds(330, 190, 230, 200);
 
-        card1.setText("jLabel1");
+        card1.setText("Linear Search");
         card1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         card1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                card1MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 card1MouseEntered(evt);
             }
@@ -206,6 +211,18 @@ card1.setSize(width,height);
     private void card6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card6MouseExited
         card6.setSize(width,height);
     }//GEN-LAST:event_card6MouseExited
+
+    private void card1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card1MouseClicked
+linearSearch ls = new linearSearch();
+ls.setVisible(true);
+this.dispose();
+    }//GEN-LAST:event_card1MouseClicked
+
+    private void card2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card2MouseClicked
+binarySearch ls = new binarySearch();
+ls.setVisible(true);
+this.dispose();
+    }//GEN-LAST:event_card2MouseClicked
 
     /**
      * @param args the command line arguments
