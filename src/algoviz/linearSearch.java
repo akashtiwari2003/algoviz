@@ -101,14 +101,14 @@ public class linearSearch extends javax.swing.JFrame {
         jPanel1.add(btn4);
         btn4.setBounds(80, 270, 225, 111);
 
-        jButton2.setText("Start");
+        jButton2.setText("Reset");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(550, 580, 170, 50);
+        jButton2.setBounds(480, 580, 170, 50);
 
         jButton1.setText("Start");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -117,7 +117,7 @@ public class linearSearch extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(360, 580, 170, 50);
+        jButton1.setBounds(230, 580, 170, 50);
 
         jButton3.setText("jButton2");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -126,7 +126,7 @@ public class linearSearch extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(750, 580, 75, 23);
+        jButton3.setBounds(755, 610, 0, 10);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 900, 800);
@@ -145,7 +145,6 @@ int h;
         public void actionPerformed(ActionEvent e) {
             if(h>=9){
                 timerr.stop();
-                JOptionPane.showMessageDialog(null, "Found!");
             }
             for(int g = 0;g<9;++g){
                 arBt[g].setBackground(Color.black);
@@ -186,6 +185,7 @@ arBt[5] = btn6;
 arBt[6] = btn7;
 arBt[7] = btn8;
 arBt[8] = btn9;
+jButton3.setVisible(false);
 setBlack(black);
     }//GEN-LAST:event_formWindowOpened
 
@@ -193,6 +193,8 @@ setBlack(black);
 if(h<9){
     if(s1[h].equals(fi)){
         timerr.stop();
+        int temp = h+1;
+        JOptionPane.showMessageDialog(this, "Found at "+ temp);
     }
     bt[h].setBackground(Color.BLUE);
     ++h;
