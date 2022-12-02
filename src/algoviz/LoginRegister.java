@@ -170,7 +170,7 @@ else{
     try{
        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algovizdb",dbUser,dbPass);
        Statement st = con.createStatement();
-       String qry = "select * from login where username = '"+username+"' and password = '"+password+"';";
+       String qry = "select * from register where username = '"+username+"' and password = '"+password+"';";
        ResultSet rs = st.executeQuery(qry);
        if(rs.next())
        {

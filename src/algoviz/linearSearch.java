@@ -36,9 +36,10 @@ public class linearSearch extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        kGradientPanel1 = new com.k33ptoo.components.KGradientPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(900, 800));
+        setPreferredSize(new java.awt.Dimension(900, 725));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -211,6 +212,8 @@ public class linearSearch extends javax.swing.JFrame {
         jButton3.setBounds(755, 610, 0, 10);
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 900, 800);
+        jPanel1.add(kGradientPanel1);
+        kGradientPanel1.setBounds(0, 0, 970, 690);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 900, 800);
@@ -432,5 +435,6 @@ private void setBtnSize(int w,int h){
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel1;
     // End of variables declaration//GEN-END:variables
 }
