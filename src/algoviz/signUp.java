@@ -27,17 +27,20 @@ public class signUp extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField4 = new javax.swing.JTextField();
+        kGradientPanel1 = new com.k33ptoo.components.KGradientPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jPasswordField2 = new javax.swing.JPasswordField();
         jTextField3 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        leftBack = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        kButton1 = new com.k33ptoo.components.KButton();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(700, 600));
@@ -48,49 +51,136 @@ public class signUp extends javax.swing.JFrame {
         });
         getContentPane().setLayout(null);
 
-        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(290, 0, 10, 600);
+        kGradientPanel1.setkEndColor(new java.awt.Color(0, 204, 204));
+        kGradientPanel1.setkGradientFocus(600);
+        kGradientPanel1.setkStartColor(new java.awt.Color(153, 0, 153));
+        kGradientPanel1.setLayout(null);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Security Question", "What's your favourite subject?", "Whats's your pet name?", "What's your favourite Movie?", " " }));
-        getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(390, 320, 150, 22);
-        getContentPane().add(jTextField4);
-        jTextField4.setBounds(390, 410, 150, 22);
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(null);
 
-        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder("Name"));
-        jTextField1.setOpaque(true);
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(390, 170, 150, 39);
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(390, 200, 150, 22);
-        getContentPane().add(jPasswordField1);
-        jPasswordField1.setBounds(390, 260, 150, 22);
-        getContentPane().add(jPasswordField2);
-        jPasswordField2.setBounds(390, 290, 150, 22);
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(390, 230, 150, 22);
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 380, 210, 220);
+        jLabel1.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel1.setText("password");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(50, 270, 60, 16);
 
-        leftBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/algoviz/back3.png"))); // NOI18N
-        getContentPane().add(leftBack);
-        leftBack.setBounds(0, 0, 290, 600);
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 700, 600);
+        jLabel4.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(153, 0, 153));
+        jLabel4.setText("SignUp");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(50, 30, 90, 16);
+
+        jLabel5.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel5.setText("Name");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(50, 80, 60, 16);
+
+        jLabel6.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel6.setText("Username");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(50, 140, 60, 16);
+
+        jLabel7.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel7.setText("email");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(50, 210, 60, 16);
+
+        jTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(153, 0, 204)));
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField1);
+        jTextField1.setBounds(50, 290, 190, 22);
+
+        jTextField2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(153, 0, 204)));
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField2);
+        jTextField2.setBounds(50, 100, 190, 22);
+
+        jTextField3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(153, 0, 204)));
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField3);
+        jTextField3.setBounds(50, 160, 190, 22);
+
+        jTextField4.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(153, 0, 204)));
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField4);
+        jTextField4.setBounds(50, 230, 190, 22);
+
+        kButton1.setText("SignUp");
+        kButton1.setkBackGroundColor(new java.awt.Color(0, 204, 204));
+        kButton1.setkEndColor(new java.awt.Color(153, 0, 153));
+        kButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(kButton1);
+        kButton1.setBounds(50, 410, 190, 45);
+
+        kGradientPanel1.add(jPanel1);
+        jPanel1.setBounds(290, 50, 340, 480);
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("AlgoViz");
+        kGradientPanel1.add(jLabel8);
+        jLabel8.setBounds(40, 50, 70, 25);
+
+        getContentPane().add(kGradientPanel1);
+        kGradientPanel1.setBounds(0, 0, 700, 600);
+
+        jLabel9.setText("jLabel9");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(150, 380, 38, 16);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+algovizFunctions a = new algovizFunctions();
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-jTextField1.setFocusable(true);
+/*jTextField1.setFocusable(true);
 jTextField1.setOpaque(false);
 TitledBorder tb = BorderFactory.createTitledBorder(
 BorderFactory.createEtchedBorder(),"user",TitledBorder.LEFT,TitledBorder.TOP);
 tb.setTitleColor(Color.black);
 jTextField1.setBorder(tb);
-jTextField1.setSize(223, 40);
+jTextField1.setSize(223, 40);*/
+//
     }//GEN-LAST:event_formWindowOpened
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void kButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_kButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -128,17 +218,20 @@ jTextField1.setSize(223, 40);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JLabel leftBack;
+    private com.k33ptoo.components.KButton kButton1;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel1;
     // End of variables declaration//GEN-END:variables
 }
