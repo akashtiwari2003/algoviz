@@ -55,6 +55,9 @@ public class LoginRegister extends javax.swing.JFrame {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jButton1MouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton1MouseExited(evt);
+            }
         });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,11 +119,15 @@ public class LoginRegister extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 String dbUser = "root";
 String dbPass = "root";
+int bth; 
+int btw ;
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
 iniitComponents();
 algovizFunctions a = new algovizFunctions();
 a.setBackground("back.jpg",jLabel4);
 a.setBackground("blurLabel.png",jLabel3);
+bth = jButton1.getSize().height;
+btw = jButton1.getSize().width;
 /*
 ImageIcon img2 = new ImageIcon(getClass().getResource("blurLabel.png"));
 Image im2 = img2.getImage();
@@ -186,8 +193,14 @@ else{
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
-        
+jButton1.setSize(btw+5,bth+5);
+jButton1.setBorder(BorderFactory.createBevelBorder(1));
     }//GEN-LAST:event_jButton1MouseEntered
+
+    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
+jButton1.setSize(btw, bth);
+jButton1.setBorder(BorderFactory.createEtchedBorder());
+    }//GEN-LAST:event_jButton1MouseExited
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

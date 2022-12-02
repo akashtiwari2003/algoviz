@@ -52,6 +52,14 @@ public class linearSearch extends javax.swing.JFrame {
         btn5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btn5.setForeground(new java.awt.Color(255, 255, 255));
         btn5.setText("E");
+        btn5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn5MouseExited(evt);
+            }
+        });
         jPanel1.add(btn5);
         btn5.setBounds(330, 270, 225, 111);
 
@@ -59,6 +67,14 @@ public class linearSearch extends javax.swing.JFrame {
         btn2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btn2.setForeground(new java.awt.Color(255, 255, 255));
         btn2.setText("B");
+        btn2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn2MouseExited(evt);
+            }
+        });
         jPanel1.add(btn2);
         btn2.setBounds(330, 130, 225, 111);
 
@@ -66,6 +82,14 @@ public class linearSearch extends javax.swing.JFrame {
         btn3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btn3.setForeground(new java.awt.Color(255, 255, 255));
         btn3.setText("C");
+        btn3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn3MouseExited(evt);
+            }
+        });
         jPanel1.add(btn3);
         btn3.setBounds(580, 130, 225, 111);
 
@@ -73,6 +97,14 @@ public class linearSearch extends javax.swing.JFrame {
         btn1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btn1.setForeground(new java.awt.Color(255, 255, 255));
         btn1.setText("A");
+        btn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn1MouseExited(evt);
+            }
+        });
         jPanel1.add(btn1);
         btn1.setBounds(80, 130, 225, 111);
 
@@ -80,6 +112,14 @@ public class linearSearch extends javax.swing.JFrame {
         btn6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btn6.setForeground(new java.awt.Color(255, 255, 255));
         btn6.setText("F");
+        btn6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn6MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn6MouseExited(evt);
+            }
+        });
         jPanel1.add(btn6);
         btn6.setBounds(580, 270, 225, 111);
 
@@ -87,6 +127,14 @@ public class linearSearch extends javax.swing.JFrame {
         btn7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btn7.setForeground(new java.awt.Color(255, 255, 255));
         btn7.setText("G");
+        btn7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn7MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn7MouseExited(evt);
+            }
+        });
         jPanel1.add(btn7);
         btn7.setBounds(80, 410, 225, 111);
 
@@ -94,6 +142,14 @@ public class linearSearch extends javax.swing.JFrame {
         btn8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btn8.setForeground(new java.awt.Color(255, 255, 255));
         btn8.setText("H");
+        btn8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn8MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn8MouseExited(evt);
+            }
+        });
         jPanel1.add(btn8);
         btn8.setBounds(330, 410, 225, 111);
 
@@ -101,6 +157,14 @@ public class linearSearch extends javax.swing.JFrame {
         btn9.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btn9.setForeground(new java.awt.Color(255, 255, 255));
         btn9.setText("I");
+        btn9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn9MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn9MouseExited(evt);
+            }
+        });
         jPanel1.add(btn9);
         btn9.setBounds(580, 410, 225, 111);
 
@@ -108,6 +172,14 @@ public class linearSearch extends javax.swing.JFrame {
         btn4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btn4.setForeground(new java.awt.Color(255, 255, 255));
         btn4.setText("D");
+        btn4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn4MouseExited(evt);
+            }
+        });
         jPanel1.add(btn4);
         btn4.setBounds(80, 270, 225, 111);
 
@@ -151,7 +223,8 @@ JButton bt[] = new JButton[9];
 String fi;
 String s1[] = new String[9];
 int h;
-
+int btnW = 215;
+int btnH = 135;
     public Timer timerr = new Timer(900, new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -199,6 +272,7 @@ arBt[7] = btn8;
 arBt[8] = btn9;
 jButton3.setVisible(false);
 setBlack(black);
+setBtnSize(210,130);
     }//GEN-LAST:event_formWindowOpened
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -217,6 +291,78 @@ if(h<9){
 setBlack(black);
 h=0;
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void btn1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn1MouseEntered
+        btn1.setSize(btnW, btnH);
+    }//GEN-LAST:event_btn1MouseEntered
+
+    private void btn2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn2MouseEntered
+        btn2.setSize(btnW, btnH);
+    }//GEN-LAST:event_btn2MouseEntered
+
+    private void btn3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn3MouseEntered
+        btn3.setSize(btnW, btnH);
+    }//GEN-LAST:event_btn3MouseEntered
+
+    private void btn4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn4MouseEntered
+        btn4.setSize(btnW, btnH);
+    }//GEN-LAST:event_btn4MouseEntered
+
+    private void btn5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn5MouseEntered
+        btn5.setSize(btnW, btnH);
+    }//GEN-LAST:event_btn5MouseEntered
+
+    private void btn6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn6MouseEntered
+        btn6.setSize(btnW, btnH);
+    }//GEN-LAST:event_btn6MouseEntered
+
+    private void btn7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn7MouseEntered
+        btn7.setSize(btnW, btnH);
+    }//GEN-LAST:event_btn7MouseEntered
+
+    private void btn8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn8MouseEntered
+        btn8.setSize(btnW, btnH);
+    }//GEN-LAST:event_btn8MouseEntered
+
+    private void btn9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn9MouseEntered
+        btn9.setSize(btnW, btnH);
+    }//GEN-LAST:event_btn9MouseEntered
+
+    private void btn1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn1MouseExited
+        btn1.setSize(210,130);
+    }//GEN-LAST:event_btn1MouseExited
+
+    private void btn2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn2MouseExited
+        btn2.setSize(210,130);
+    }//GEN-LAST:event_btn2MouseExited
+
+    private void btn3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn3MouseExited
+        btn3.setSize(210,130);
+    }//GEN-LAST:event_btn3MouseExited
+
+    private void btn4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn4MouseExited
+        btn4.setSize(210,130);
+    }//GEN-LAST:event_btn4MouseExited
+
+    private void btn5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn5MouseExited
+        btn5.setSize(210,130);
+    }//GEN-LAST:event_btn5MouseExited
+
+    private void btn6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn6MouseExited
+        btn6.setSize(210,130);
+    }//GEN-LAST:event_btn6MouseExited
+
+    private void btn7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn7MouseExited
+        btn7.setSize(210,130);
+    }//GEN-LAST:event_btn7MouseExited
+
+    private void btn8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn8MouseExited
+        btn8.setSize(210,130);
+    }//GEN-LAST:event_btn8MouseExited
+
+    private void btn9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn9MouseExited
+        btn9.setSize(210,130);
+    }//GEN-LAST:event_btn9MouseExited
 
 
     public static void main(String args[]) {
@@ -263,6 +409,12 @@ private int checkBg(){
 private void setBlack(Color col){
     for(int i = 0; i<9; ++i){
         arBt[i].setBackground(col);
+    }
+}
+
+private void setBtnSize(int w,int h){
+    for(int i = 0; i<9; ++i){
+        arBt[i].setSize(w, h);
     }
 }
     // Variables declaration - do not modify//GEN-BEGIN:variables
