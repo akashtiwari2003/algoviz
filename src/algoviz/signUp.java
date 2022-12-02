@@ -4,6 +4,10 @@
  */
 package algoviz;
 
+import java.awt.Color;
+import javax.swing.BorderFactory;
+import javax.swing.border.TitledBorder;
+
 /**
  *
  * @author Lenovo
@@ -22,6 +26,7 @@ public class signUp extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jComboBox1 = new javax.swing.JComboBox<>();
         jTextField4 = new javax.swing.JTextField();
@@ -31,7 +36,6 @@ public class signUp extends javax.swing.JFrame {
         jPasswordField2 = new javax.swing.JPasswordField();
         jTextField3 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         leftBack = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -48,25 +52,26 @@ public class signUp extends javax.swing.JFrame {
         getContentPane().add(jSeparator1);
         jSeparator1.setBounds(290, 0, 10, 600);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Security Question", "What's your favourite subject?", "Whats's your pet name?", "What's your favourite Movie?", " " }));
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(400, 330, 130, 22);
+        jComboBox1.setBounds(390, 320, 150, 22);
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(400, 370, 130, 22);
+        jTextField4.setBounds(390, 410, 150, 22);
+
+        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder("Name"));
+        jTextField1.setOpaque(true);
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(400, 170, 64, 22);
+        jTextField1.setBounds(390, 170, 150, 39);
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(400, 200, 71, 22);
+        jTextField2.setBounds(390, 200, 150, 22);
         getContentPane().add(jPasswordField1);
-        jPasswordField1.setBounds(400, 260, 64, 22);
+        jPasswordField1.setBounds(390, 260, 150, 22);
         getContentPane().add(jPasswordField2);
-        jPasswordField2.setBounds(400, 290, 64, 22);
+        jPasswordField2.setBounds(390, 290, 150, 22);
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(400, 230, 64, 22);
+        jTextField3.setBounds(390, 230, 150, 22);
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, 380, 210, 220);
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(290, 0, 410, 600);
 
         leftBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/algoviz/back3.png"))); // NOI18N
         getContentPane().add(leftBack);
@@ -78,7 +83,13 @@ public class signUp extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-
+jTextField1.setFocusable(true);
+jTextField1.setOpaque(false);
+TitledBorder tb = BorderFactory.createTitledBorder(
+BorderFactory.createEtchedBorder(),"user",TitledBorder.LEFT,TitledBorder.TOP);
+tb.setTitleColor(Color.black);
+jTextField1.setBorder(tb);
+jTextField1.setSize(223, 40);
     }//GEN-LAST:event_formWindowOpened
 
     /**
