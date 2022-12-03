@@ -75,7 +75,7 @@ public class searchBinary extends javax.swing.JFrame {
         kGradientPanel2.setOpaque(false);
         kGradientPanel2.setLayout(null);
 
-        jLabel1.setText("jLabel1");
+        jLabel1.setText("1");
         kGradientPanel2.add(jLabel1);
         jLabel1.setBounds(0, 0, 60, 40);
 
@@ -85,7 +85,7 @@ public class searchBinary extends javax.swing.JFrame {
         kGradientPanel3.setOpaque(false);
         kGradientPanel3.setLayout(null);
 
-        jLabel2.setText("jLabel2");
+        jLabel2.setText("2");
         kGradientPanel3.add(jLabel2);
         jLabel2.setBounds(0, 0, 60, 70);
 
@@ -95,7 +95,7 @@ public class searchBinary extends javax.swing.JFrame {
         kGradientPanel4.setOpaque(false);
         kGradientPanel4.setLayout(null);
 
-        jLabel3.setText("jLabel3");
+        jLabel3.setText("3");
         kGradientPanel4.add(jLabel3);
         jLabel3.setBounds(0, 0, 60, 100);
 
@@ -105,7 +105,7 @@ public class searchBinary extends javax.swing.JFrame {
         kGradientPanel5.setOpaque(false);
         kGradientPanel5.setLayout(null);
 
-        jLabel4.setText("jLabel4");
+        jLabel4.setText("4");
         kGradientPanel5.add(jLabel4);
         jLabel4.setBounds(0, 0, 60, 130);
 
@@ -115,7 +115,7 @@ public class searchBinary extends javax.swing.JFrame {
         kGradientPanel6.setOpaque(false);
         kGradientPanel6.setLayout(null);
 
-        jLabel5.setText("jLabel5");
+        jLabel5.setText("5");
         kGradientPanel6.add(jLabel5);
         jLabel5.setBounds(0, 0, 60, 160);
 
@@ -125,7 +125,7 @@ public class searchBinary extends javax.swing.JFrame {
         kGradientPanel7.setOpaque(false);
         kGradientPanel7.setLayout(null);
 
-        jLabel6.setText("jLabel6");
+        jLabel6.setText("6");
         kGradientPanel7.add(jLabel6);
         jLabel6.setBounds(0, 0, 60, 190);
 
@@ -135,7 +135,7 @@ public class searchBinary extends javax.swing.JFrame {
         kGradientPanel8.setOpaque(false);
         kGradientPanel8.setLayout(null);
 
-        jLabel7.setText("jLabel7");
+        jLabel7.setText("7");
         kGradientPanel8.add(jLabel7);
         jLabel7.setBounds(0, 0, 60, 220);
 
@@ -145,7 +145,7 @@ public class searchBinary extends javax.swing.JFrame {
         kGradientPanel9.setOpaque(false);
         kGradientPanel9.setLayout(null);
 
-        jLabel8.setText("jLabel8");
+        jLabel8.setText("8");
         kGradientPanel9.add(jLabel8);
         jLabel8.setBounds(0, 0, 60, 260);
 
@@ -155,7 +155,7 @@ public class searchBinary extends javax.swing.JFrame {
         kGradientPanel10.setOpaque(false);
         kGradientPanel10.setLayout(null);
 
-        jLabel9.setText("jLabel9");
+        jLabel9.setText("9");
         kGradientPanel10.add(jLabel9);
         jLabel9.setBounds(0, 0, 60, 290);
 
@@ -165,7 +165,7 @@ public class searchBinary extends javax.swing.JFrame {
         kGradientPanel11.setOpaque(false);
         kGradientPanel11.setLayout(null);
 
-        jLabel10.setText("jLabel10");
+        jLabel10.setText("10");
         kGradientPanel11.add(jLabel10);
         jLabel10.setBounds(0, 0, 60, 320);
 
@@ -188,7 +188,7 @@ public class searchBinary extends javax.swing.JFrame {
             }
         });
         kGradientPanel1.add(jButton3);
-        jButton3.setBounds(720, 520, 75, 23);
+        jButton3.setBounds(720, 520, 75, 20);
 
         getContentPane().add(kGradientPanel1);
         kGradientPanel1.setBounds(0, 0, 900, 800);
@@ -198,7 +198,7 @@ public class searchBinary extends javax.swing.JFrame {
 KGradientPanel arBt[] = new KGradientPanel[10];
 KGradientPanel bt[] = new KGradientPanel[10];
 JLabel btL[] = new JLabel[10];
-int btnWidth = 130;
+int btnWidth = 65;
 int left;
 int right;
 int medium;
@@ -208,16 +208,17 @@ boolean on = false;
 int fi;
 int s1[] = new int[10];
 int h;
-int btnNWidth = 120;
+int btnNWidth = 60;
 int btnNHeight = 120;
 public Timer timerr = new Timer(900, new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
+            medium = (left + right)/2;
             if(left>=right){
                 timerr.stop();
             }
             for(int g = 0;g<10;++g){
-                arBt[g].setSize(btnNWidth,btnNHeight);
+                arBt[g].setSize(btnNWidth,arBt[g].getSize().height);
             }
            jButton3.doClick();
         }
@@ -278,13 +279,14 @@ timerr.start();
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 if(left<=right){
+    bt[medium].setSize(btnWidth,bt[medium].getSize().height);
     if(s1[medium] == fi){
         timerr.stop();
         elementFound = 1;
         setBlack();
         blinktimerr.start();
         int temp = h+1;
-        JOptionPane.showMessageDialog(this, "Found at "+ temp);
+        JOptionPane.showMessageDialog(this, "Found at "+ medium+1);
     }
     
     else if(s1[medium] < fi){
@@ -294,7 +296,7 @@ if(left<=right){
         right = medium-1;
     }
     if(elementFound == 0){
-        bt[medium].setSize(btnWidth, btnHeight);
+        bt[medium].setSize(btnWidth, bt[medium].getSize().height);
     ++h;
     }
 }
@@ -344,6 +346,13 @@ private void setWhite(){
     for(int i = 0; i<10; ++i){
         btL[i].setForeground(white);
     }
+}
+private KGradientPanel[] newArray(int l,int r){
+    KGradientPanel[] kArr = new KGradientPanel[r-l+1];
+    for(int i = l; i<=r; ++i){
+        kArr[i] = bt[i];
+    }
+    return kArr;
 }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton3;

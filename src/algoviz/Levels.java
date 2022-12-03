@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -31,30 +32,21 @@ public class Levels extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSeparator1 = new javax.swing.JSeparator();
-        jProgressBar1 = new javax.swing.JProgressBar();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        kGradientPanel1 = new com.k33ptoo.components.KGradientPanel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        card6 = new javax.swing.JLabel();
-        card5 = new javax.swing.JLabel();
-        card4 = new javax.swing.JLabel();
-        card3 = new javax.swing.JLabel();
-        card2 = new javax.swing.JLabel();
-        card1 = new javax.swing.JLabel();
-        background = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        kButton1 = new com.k33ptoo.components.KButton();
+        kButton2 = new com.k33ptoo.components.KButton();
+        kButton3 = new com.k33ptoo.components.KButton();
+        kButton4 = new com.k33ptoo.components.KButton();
+        kButton5 = new com.k33ptoo.components.KButton();
+        kButton6 = new com.k33ptoo.components.KButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(900, 800));
@@ -64,202 +56,123 @@ public class Levels extends javax.swing.JFrame {
             }
         });
         getContentPane().setLayout(null);
-        getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(0, 150, 900, 20);
-        getContentPane().add(jProgressBar1);
-        jProgressBar1.setBounds(330, 760, 146, 30);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(null);
-
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setText("1");
-        jPanel1.add(jLabel12);
-        jLabel12.setBounds(650, 470, 130, 80);
-
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setText("Linear Search");
-        jPanel1.add(jLabel13);
-        jLabel13.setBounds(600, 530, 230, 80);
-
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("1");
-        jPanel1.add(jLabel10);
-        jLabel10.setBounds(380, 470, 130, 80);
-
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("Linear Search");
-        jPanel1.add(jLabel11);
-        jLabel11.setBounds(330, 530, 230, 80);
-
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("4");
-        jPanel1.add(jLabel8);
-        jLabel8.setBounds(110, 470, 130, 80);
-
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("Linear Search");
-        jPanel1.add(jLabel9);
-        jLabel9.setBounds(60, 530, 230, 80);
-
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("3");
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(650, 230, 130, 80);
+        kGradientPanel1.setkEndColor(new java.awt.Color(51, 51, 255));
+        kGradientPanel1.setkStartColor(new java.awt.Color(255, 51, 51));
+        kGradientPanel1.setLayout(null);
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("Bubble Sort");
-        jPanel1.add(jLabel7);
-        jLabel7.setBounds(600, 290, 230, 80);
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/algoviz/icons8-lock-50.png"))); // NOI18N
+        kGradientPanel1.add(jLabel7);
+        jLabel7.setBounds(620, 450, 230, 70);
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("2");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(380, 230, 130, 80);
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/algoviz/icons8-lock-50.png"))); // NOI18N
+        kGradientPanel1.add(jLabel8);
+        jLabel8.setBounds(340, 450, 230, 70);
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Binary Search");
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(330, 290, 230, 80);
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/algoviz/icons8-lock-50.png"))); // NOI18N
+        kGradientPanel1.add(jLabel6);
+        jLabel6.setBounds(330, 220, 230, 70);
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Linear Search");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(60, 290, 230, 80);
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Binary Search");
+        kGradientPanel1.add(jLabel1);
+        jLabel1.setBounds(340, 270, 230, 70);
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("1");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(110, 230, 130, 80);
+        jLabel2.setText("Bubble Sort");
+        kGradientPanel1.add(jLabel2);
+        jLabel2.setBounds(50, 440, 230, 140);
 
-        card6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        card6.setForeground(new java.awt.Color(255, 255, 255));
-        card6.setText("jLabel1");
-        card6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                card6MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                card6MouseExited(evt);
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Selection Sort");
+        kGradientPanel1.add(jLabel3);
+        jLabel3.setBounds(340, 510, 230, 70);
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Insertion Sort");
+        kGradientPanel1.add(jLabel4);
+        jLabel4.setBounds(620, 500, 230, 80);
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Linear Search");
+        kGradientPanel1.add(jLabel5);
+        jLabel5.setBounds(50, 210, 230, 140);
+
+        kButton1.setkBorderRadius(50);
+        kButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(card6);
-        card6.setBounds(600, 430, 230, 200);
+        kGradientPanel1.add(kButton1);
+        kButton1.setBounds(40, 200, 260, 160);
 
-        card5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        card5.setForeground(new java.awt.Color(255, 255, 255));
-        card5.setText("jLabel1");
-        card5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                card5MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                card5MouseExited(evt);
+        kButton2.setkBorderRadius(50);
+        kButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(card5);
-        card5.setBounds(330, 430, 230, 200);
+        kGradientPanel1.add(kButton2);
+        kButton2.setBounds(320, 200, 260, 160);
 
-        card4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        card4.setForeground(new java.awt.Color(255, 255, 255));
-        card4.setText("jLabel1");
-        card4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                card4MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                card4MouseExited(evt);
+        kButton3.setkBorderRadius(50);
+        kButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(card4);
-        card4.setBounds(60, 430, 230, 200);
+        kGradientPanel1.add(kButton3);
+        kButton3.setBounds(40, 430, 260, 160);
 
-        card3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        card3.setForeground(new java.awt.Color(255, 255, 255));
-        card3.setText("Bubble Sort");
-        card3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                card3MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                card3MouseExited(evt);
+        kButton4.setkBorderRadius(50);
+        kButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kButton4ActionPerformed(evt);
             }
         });
-        jPanel1.add(card3);
-        card3.setBounds(600, 190, 230, 200);
+        kGradientPanel1.add(kButton4);
+        kButton4.setBounds(320, 430, 260, 160);
 
-        card2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        card2.setForeground(new java.awt.Color(255, 255, 255));
-        card2.setText("Binary Search");
-        card2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                card2MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                card2MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                card2MouseExited(evt);
+        kButton5.setkBorderRadius(50);
+        kButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kButton5ActionPerformed(evt);
             }
         });
-        jPanel1.add(card2);
-        card2.setBounds(330, 190, 230, 200);
+        kGradientPanel1.add(kButton5);
+        kButton5.setBounds(600, 430, 260, 160);
 
-        card1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        card1.setForeground(new java.awt.Color(255, 255, 255));
-        card1.setText("Linear Search");
-        card1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                card1MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                card1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                card1MouseExited(evt);
+        kButton6.setText("Logout");
+        kButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kButton6ActionPerformed(evt);
             }
         });
-        jPanel1.add(card1);
-        card1.setBounds(60, 190, 230, 200);
+        kGradientPanel1.add(kButton6);
+        kButton6.setBounds(30, 50, 185, 45);
 
-        background.setBackground(new java.awt.Color(0, 204, 153));
-        jPanel1.add(background);
-        background.setBounds(0, 0, 900, 800);
-
-        jLabel1.setBackground(new java.awt.Color(79, 37, 122));
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 0, 900, 800);
-
-        jToggleButton1.setText("jToggleButton1");
-        jPanel1.add(jToggleButton1);
-        jToggleButton1.setBounds(700, 90, 111, 23);
-
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 900, 800);
+        getContentPane().add(kGradientPanel1);
+        kGradientPanel1.setBounds(0, 0, 900, 800);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -268,15 +181,7 @@ int height = 200;
 int width = 230;
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         int status1,status2,status3,status4,prog = 0;
-        a.setBackground("v.jpg", card1);
-        a.setBackground("gradient6.jpg", card2);
-        a.setBackground("gradient5.jpg", card3);
-        a.setBackground("gradient3.jpg", card4);
-        a.setBackground("gradient1.jpg", card5);
-        a.setBackground("gradient2.jpg", card6);
-        a.setBackground("blurLabel.png", background);
-        a.setBackground("g1.png",jLabel1);
-        System.out.println(card2.getSize());
+
         try{
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algovizdb","root","root");
             Statement st = con.createStatement();
@@ -298,72 +203,52 @@ int width = 230;
                 prog+= 25;
             if(status4 == 1)
                 prog+= 25;
-            jProgressBar1.setValue(prog);
+            
         }
         catch(Exception e){
             e.printStackTrace();
         }
     }//GEN-LAST:event_formWindowOpened
 
-    private void card1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card1MouseEntered
-card1.setSize(width+5, height+5);
-    }//GEN-LAST:event_card1MouseEntered
-
-    private void card1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card1MouseExited
-card1.setSize(width,height);
-    }//GEN-LAST:event_card1MouseExited
-
-    private void card2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card2MouseEntered
-        card2.setSize(width+5, height+5);
-    }//GEN-LAST:event_card2MouseEntered
-
-    private void card2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card2MouseExited
-        card2.setSize(width,height);
-    }//GEN-LAST:event_card2MouseExited
-
-    private void card3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card3MouseEntered
-        card3.setSize(width+5, height+5);
-    }//GEN-LAST:event_card3MouseEntered
-
-    private void card3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card3MouseExited
-        card3.setSize(width,height);
-    }//GEN-LAST:event_card3MouseExited
-
-    private void card4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card4MouseEntered
-        card4.setSize(width+5, height+5);
-    }//GEN-LAST:event_card4MouseEntered
-
-    private void card4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card4MouseExited
-        card4.setSize(width,height);
-    }//GEN-LAST:event_card4MouseExited
-
-    private void card5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card5MouseEntered
-        card5.setSize(width+5, height+5);
-    }//GEN-LAST:event_card5MouseEntered
-
-    private void card5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card5MouseExited
-        card5.setSize(width,height);
-    }//GEN-LAST:event_card5MouseExited
-
-    private void card6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card6MouseEntered
-        card6.setSize(width+5, height+5);
-    }//GEN-LAST:event_card6MouseEntered
-
-    private void card6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card6MouseExited
-        card6.setSize(width,height);
-    }//GEN-LAST:event_card6MouseExited
-
-    private void card1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card1MouseClicked
-linearSearch ls = new linearSearch();
-ls.setVisible(true);
+    private void kButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton1ActionPerformed
+searchLinear sl = new searchLinear();
+sl.setVisible(true);
 this.dispose();
-    }//GEN-LAST:event_card1MouseClicked
+    }//GEN-LAST:event_kButton1ActionPerformed
 
-    private void card2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card2MouseClicked
-binarySearch ls = new binarySearch();
-ls.setVisible(true);
+    private void kButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton2ActionPerformed
+JOptionPane.showMessageDialog(this,"Coming Soon!!");
+    }//GEN-LAST:event_kButton2ActionPerformed
+
+    private void kButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton3ActionPerformed
+BubbleSort sl = new BubbleSort();
+sl.setVisible(true);
 this.dispose();
-    }//GEN-LAST:event_card2MouseClicked
+    }//GEN-LAST:event_kButton3ActionPerformed
+
+    private void kButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton4ActionPerformed
+JOptionPane.showMessageDialog(this,"Coming Soon!!");
+    }//GEN-LAST:event_kButton4ActionPerformed
+
+    private void kButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton5ActionPerformed
+JOptionPane.showMessageDialog(this,"Coming Soon!!");
+    }//GEN-LAST:event_kButton5ActionPerformed
+
+    private void kButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton6ActionPerformed
+try{
+       Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algovizdb","root","root");
+       Statement st = con.createStatement();
+       String qry = "delete from loggedIn;";
+       st.executeUpdate(qry);
+       LoginRegister l = new LoginRegister();
+       l.setVisible(true);
+       this.dispose();
+    }
+    catch(Exception e){
+        e.printStackTrace();
+        JOptionPane.showMessageDialog(this,"An Error Occured. Try Again!","Error",JOptionPane.ERROR_MESSAGE);
+    }
+    }//GEN-LAST:event_kButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -401,18 +286,7 @@ this.dispose();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel background;
-    private javax.swing.JLabel card1;
-    private javax.swing.JLabel card2;
-    private javax.swing.JLabel card3;
-    private javax.swing.JLabel card4;
-    private javax.swing.JLabel card5;
-    private javax.swing.JLabel card6;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -420,10 +294,12 @@ this.dispose();
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JProgressBar jProgressBar1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JToggleButton jToggleButton1;
+    private com.k33ptoo.components.KButton kButton1;
+    private com.k33ptoo.components.KButton kButton2;
+    private com.k33ptoo.components.KButton kButton3;
+    private com.k33ptoo.components.KButton kButton4;
+    private com.k33ptoo.components.KButton kButton5;
+    private com.k33ptoo.components.KButton kButton6;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel1;
     // End of variables declaration//GEN-END:variables
 }

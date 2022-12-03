@@ -19,12 +19,15 @@ public class LoginRegister extends javax.swing.JFrame {
 
         parentPanel = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
+        kGradientPanel1 = new com.k33ptoo.components.KGradientPanel();
+        kGradientPanel2 = new com.k33ptoo.components.KGradientPanel();
         usernameTF = new javax.swing.JTextField();
         passwordTF = new javax.swing.JPasswordField();
-        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        kButton1 = new com.k33ptoo.components.KButton();
+        kButton2 = new com.k33ptoo.components.KButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(700, 500));
@@ -43,71 +46,69 @@ public class LoginRegister extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(350, 500));
         jPanel2.setLayout(null);
 
-        usernameTF.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        kGradientPanel1.setLayout(null);
+
+        kGradientPanel2.setkBorderRadius(30);
+        kGradientPanel2.setkEndColor(new java.awt.Color(255, 255, 255));
+        kGradientPanel2.setkStartColor(new java.awt.Color(255, 255, 255));
+        kGradientPanel2.setOpaque(false);
+        kGradientPanel2.setLayout(null);
+
+        usernameTF.setFont(new java.awt.Font("Segoe UI Variable", 1, 12)); // NOI18N
         usernameTF.setToolTipText("Username");
-        usernameTF.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        usernameTF.setFocusable(false);
-        usernameTF.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                usernameTFFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                usernameTFFocusLost(evt);
-            }
-        });
-        jPanel2.add(usernameTF);
-        usernameTF.setBounds(240, 180, 220, 30);
+        usernameTF.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(204, 51, 255)));
+        usernameTF.setOpaque(true);
+        kGradientPanel2.add(usernameTF);
+        usernameTF.setBounds(40, 40, 220, 30);
 
-        passwordTF.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        passwordTF.setFont(new java.awt.Font("Segoe UI Variable", 1, 12)); // NOI18N
         passwordTF.setToolTipText("Password");
-        passwordTF.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        passwordTF.setFocusable(false);
-        passwordTF.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                passwordTFFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                passwordTFFocusLost(evt);
-            }
-        });
-        jPanel2.add(passwordTF);
-        passwordTF.setBounds(240, 240, 220, 30);
-
-        jLabel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel2.add(jLabel3);
-        jLabel3.setBounds(200, 130, 300, 220);
+        passwordTF.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(204, 51, 255)));
+        kGradientPanel2.add(passwordTF);
+        passwordTF.setBounds(40, 100, 220, 30);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Forgot Password?");
-        jPanel2.add(jLabel1);
-        jLabel1.setBounds(360, 280, 100, 16);
+        kGradientPanel2.add(jLabel1);
+        jLabel1.setBounds(160, 140, 100, 16);
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 0));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Login");
-        jButton1.setToolTipText("");
-        jButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jButton1.setFocusable(false);
-        jButton1.setOpaque(true);
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton1MouseExited(evt);
-            }
-        });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        kButton1.setText("Login");
+        kButton1.setkBorderRadius(50);
+        kButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                kButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1);
-        jButton1.setBounds(310, 310, 90, 30);
-        jPanel2.add(jLabel4);
-        jLabel4.setBounds(0, 0, 700, 500);
+        kGradientPanel2.add(kButton1);
+        kButton1.setBounds(170, 170, 100, 45);
+
+        kButton2.setText("SignUp");
+        kButton2.setkBorderRadius(50);
+        kButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kButton2ActionPerformed(evt);
+            }
+        });
+        kGradientPanel2.add(kButton2);
+        kButton2.setBounds(30, 170, 100, 45);
+
+        kGradientPanel1.add(kGradientPanel2);
+        kGradientPanel2.setBounds(200, 130, 300, 220);
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("AlgoViz");
+        kGradientPanel1.add(jLabel5);
+        jLabel5.setBounds(260, 100, 190, 30);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/algoviz/Gray Illustration Gaming Logo (4).png"))); // NOI18N
+        kGradientPanel1.add(jLabel2);
+        jLabel2.setBounds(230, 0, 220, 130);
+
+        jPanel2.add(kGradientPanel1);
+        kGradientPanel1.setBounds(0, 0, 690, 490);
 
         parentPanel.add(jPanel2);
         jPanel2.setBounds(0, 0, 700, 500);
@@ -122,12 +123,7 @@ String dbPass = "root";
 int bth; 
 int btw ;
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-iniitComponents();
-algovizFunctions a = new algovizFunctions();
-a.setBackground("back.jpg",jLabel4);
-a.setBackground("blurLabel.png",jLabel3);
-bth = jButton1.getSize().height;
-btw = jButton1.getSize().width;
+
 /*
 ImageIcon img2 = new ImageIcon(getClass().getResource("blurLabel.png"));
 Image im2 = img2.getImage();
@@ -137,29 +133,7 @@ jButton1.setIcon(background_img2);
 */
     }//GEN-LAST:event_formWindowOpened
 
-    private void usernameTFFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_usernameTFFocusGained
-TitledBorder tb = BorderFactory.createTitledBorder(
-BorderFactory.createEtchedBorder(),"user",TitledBorder.LEFT,TitledBorder.TOP);
-tb.setTitleColor(Color.white);
-usernameTF.setBorder(tb);
-    }//GEN-LAST:event_usernameTFFocusGained
-
-    private void passwordTFFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordTFFocusGained
-TitledBorder tb = BorderFactory.createTitledBorder(
-BorderFactory.createEtchedBorder(),"password",TitledBorder.LEFT,TitledBorder.TOP);
-tb.setTitleColor(Color.white);
-passwordTF.setBorder(tb);
-    }//GEN-LAST:event_passwordTFFocusGained
-
-    private void usernameTFFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_usernameTFFocusLost
-usernameTF.setBorder(BorderFactory.createEtchedBorder());
-    }//GEN-LAST:event_usernameTFFocusLost
-
-    private void passwordTFFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordTFFocusLost
-passwordTF.setBorder(BorderFactory.createEtchedBorder());
-    }//GEN-LAST:event_passwordTFFocusLost
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void kButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton1ActionPerformed
 String username = usernameTF.getText();
 String password = passwordTF.getText();
 
@@ -190,17 +164,13 @@ else{
         JOptionPane.showMessageDialog(this,"An Error Occured. Try Again!","Error",JOptionPane.ERROR_MESSAGE);
     }
 }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_kButton1ActionPerformed
 
-    private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
-jButton1.setSize(btw+5,bth+5);
-jButton1.setBorder(BorderFactory.createBevelBorder(1));
-    }//GEN-LAST:event_jButton1MouseEntered
-
-    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
-jButton1.setSize(btw, bth);
-jButton1.setBorder(BorderFactory.createEtchedBorder());
-    }//GEN-LAST:event_jButton1MouseExited
+    private void kButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton2ActionPerformed
+signUp su = new signUp();
+su.setVisible(true);
+this.dispose();
+    }//GEN-LAST:event_kButton2ActionPerformed
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -232,22 +202,16 @@ jButton1.setBorder(BorderFactory.createEtchedBorder());
             }
         });
     }
-private void iniitComponents(){
-usernameTF.setFocusable(true);
-passwordTF.setFocusable(true);
-usernameTF.setOpaque(false);
-passwordTF.setOpaque(false);
-usernameTF.setSize(223, 40);
-passwordTF.setSize(223, 40);
-jButton1.setFocusable(true);
-jButton1.setOpaque(false);
-}
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel2;
+    private com.k33ptoo.components.KButton kButton1;
+    private com.k33ptoo.components.KButton kButton2;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel1;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel2;
     private javax.swing.JPanel parentPanel;
     private javax.swing.JPasswordField passwordTF;
     private javax.swing.JTextField usernameTF;

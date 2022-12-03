@@ -59,6 +59,7 @@ public class searchLinear extends javax.swing.JFrame {
         reset = new com.k33ptoo.components.KButton();
         startSearch = new com.k33ptoo.components.KButton();
         jButton3 = new javax.swing.JButton();
+        kButton1 = new com.k33ptoo.components.KButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(900, 800));
@@ -243,6 +244,15 @@ public class searchLinear extends javax.swing.JFrame {
         kGradientPanel1.add(jButton3);
         jButton3.setBounds(0, 10, 10, 10);
 
+        kButton1.setText("Back");
+        kButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kButton1ActionPerformed(evt);
+            }
+        });
+        kGradientPanel1.add(kButton1);
+        kButton1.setBounds(10, 20, 185, 45);
+
         getContentPane().add(kGradientPanel1);
         kGradientPanel1.setBounds(0, 0, 900, 800);
 
@@ -371,6 +381,12 @@ h=0;
 
     }//GEN-LAST:event_resetActionPerformed
 
+    private void kButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton1ActionPerformed
+Levels l = new Levels();
+    l.setVisible(true);
+    this.dispose();
+    }//GEN-LAST:event_kButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -451,6 +467,7 @@ private void setWhite(){
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private com.k33ptoo.components.KButton kButton1;
     private com.k33ptoo.components.KGradientPanel kGradientPanel1;
     private com.k33ptoo.components.KButton reset;
     private com.k33ptoo.components.KButton startSearch;
